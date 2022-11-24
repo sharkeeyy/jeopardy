@@ -5,7 +5,7 @@ import { userReducer } from '../Auth/userReducer';
 const store = createStore(
   combineReducers({
     qState: qReducer,
-    userState: userReducer
+    userState: userReducer,
   })
 );
 
