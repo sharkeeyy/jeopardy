@@ -2,7 +2,7 @@ import Action from './types/Action';
 import State from './types/State';
 
 export const init = {
-  q: []
+  questions: []
 };
 
 export const qReducer = (
@@ -13,12 +13,12 @@ export const qReducer = (
     case 'INIT_Q':
     return {
       ...state,
-      q: action.payload
+      questions: action.payload
     };
     case 'DISABLE_Q':
     return {
       ...state,
-      q: [...state.q, action.payload]
+      questions: [...state.questions, action.payload]
     };
     default: return state;
   }
