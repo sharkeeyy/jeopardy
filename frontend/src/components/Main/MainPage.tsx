@@ -1,10 +1,12 @@
 import React from 'react';
+import CardList from '../CardList/CardList';
 
 function MainPage():JSX.Element {
   return (
-    <div>
-      <p>HI</p>
-    </div>
+    <>
+      <h2>Выберите вопрос</h2>
+      <CardList />
+    </>
   );
 }
 
