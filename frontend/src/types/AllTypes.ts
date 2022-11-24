@@ -6,6 +6,8 @@ export interface Question {
   price: number;
   isEnable: boolean;
 }
+export type QuestionId = Question['id'];
+
 export interface Res { message:string; user:string }
 export interface User {
 id: number;
