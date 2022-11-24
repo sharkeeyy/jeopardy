@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import React, { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import Auth from '../components/Auth/Auth';
@@ -8,7 +9,7 @@ import Results from '../components/Results/Results';
 function App():JSX.Element {
   const array = [
     {
-      id : 1,
+      id: 1,
       theme: '1',
       name: 'Question #1',
       answer: '1',
@@ -16,7 +17,7 @@ function App():JSX.Element {
       isEnabled: true,
     },
     {
-      id : 1,
+      id: 2,
       theme: '1',
       name: 'Question #2',
       answer: '2',
@@ -24,7 +25,7 @@ function App():JSX.Element {
       isEnabled: true,
     },
     {
-      id : 1,
+      id: 3,
       theme: '1',
       name: 'Question #3',
       answer: '3',
@@ -32,7 +33,7 @@ function App():JSX.Element {
       isEnabled: true,
     },
     {
-      id : 1,
+      id: 4,
       theme: '1',
       name: 'Question #4',
       answer: '4',
@@ -40,7 +41,7 @@ function App():JSX.Element {
       isEnabled: true,
     },
     {
-      id : 1,
+      id: 5,
       theme: '1',
       name: 'Question #5',
       answer: '5',
@@ -48,7 +49,7 @@ function App():JSX.Element {
       isEnabled: true,
     },
     {
-      id : 1,
+      id: 6,
       theme: '2',
       name: 'Question #1',
       answer: '1',
@@ -56,7 +57,7 @@ function App():JSX.Element {
       isEnabled: true,
     },
     {
-      id : 1,
+      id: 7,
       theme: '2',
       name: 'Question #2',
       answer: '2',
@@ -64,7 +65,7 @@ function App():JSX.Element {
       isEnabled: true,
     },
     {
-      id : 1,
+      id: 8,
       theme: '2',
       name: 'Question #3',
       answer: '3',
@@ -72,7 +73,7 @@ function App():JSX.Element {
       isEnabled: true,
     },
     {
-      id : 1,
+      id: 9,
       theme: '2',
       name: 'Question #4',
       answer: '4',
@@ -80,7 +81,7 @@ function App():JSX.Element {
       isEnabled: true,
     },
     {
-      id : 1,
+      id: 10,
       theme: '2',
       name: 'Question #5',
       answer: '5',
@@ -88,7 +89,7 @@ function App():JSX.Element {
       isEnabled: true,
     },
     {
-      id : 1,
+      id: 11,
       theme: '3',
       name: 'Question #1',
       answer: '1',
@@ -96,7 +97,7 @@ function App():JSX.Element {
       isEnabled: true,
     },
     {
-      id : 1,
+      id: 12,
       theme: '3',
       name: 'Question #2',
       answer: '2',
@@ -104,7 +105,7 @@ function App():JSX.Element {
       isEnabled: true,
     },
     {
-      id : 1,
+      id: 13,
       theme: '3',
       name: 'Question #3',
       answer: '3',
@@ -112,7 +113,7 @@ function App():JSX.Element {
       isEnabled: true,
     },
     {
-      id : 1,
+      id: 14,
       theme: '3',
       name: 'Question #4',
       answer: '4',
@@ -120,7 +121,7 @@ function App():JSX.Element {
       isEnabled: true,
     },
     {
-      id : 1,
+      id: 15,
       theme: '3',
       name: 'Question #5',
       answer: '5',
@@ -130,13 +131,15 @@ function App():JSX.Element {
   ];
 
   const dispatch = useDispatch();
-
+  useEffect(() => {
+    dispatch({ type: 'INIT_Q', payload: array });
+  });
 
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Header />}>
-          <Route path="/main" element={<MainPage />} />
+
           <Route path="/main" element={<MainPage />} />
           <Route path="/results" element={<Results />} />
           <Route path="/registration" element={<Auth />} />
