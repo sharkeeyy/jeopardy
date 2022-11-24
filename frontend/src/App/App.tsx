@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import './App.css';
 import React, { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import Auth from '../components/Auth/Auth';
@@ -15,7 +16,7 @@ function App():JSX.Element {
       name: 'Question #1',
       answer: '1',
       price: 100,
-      isEnabled: true,
+      isEnable: true,
     },
     {
       id: 2,
@@ -23,7 +24,7 @@ function App():JSX.Element {
       name: 'Question #2',
       answer: '2',
       price: 200,
-      isEnabled: true,
+      isEnable: false,
     },
     {
       id: 3,
@@ -31,7 +32,7 @@ function App():JSX.Element {
       name: 'Question #3',
       answer: '3',
       price: 300,
-      isEnabled: true,
+      isEnable: false,
     },
     {
       id: 4,
@@ -39,7 +40,7 @@ function App():JSX.Element {
       name: 'Question #4',
       answer: '4',
       price: 400,
-      isEnabled: true,
+      isEnable: true,
     },
     {
       id: 5,
@@ -47,7 +48,7 @@ function App():JSX.Element {
       name: 'Question #5',
       answer: '5',
       price: 500,
-      isEnabled: true,
+      isEnable: true,
     },
     {
       id: 6,
@@ -55,7 +56,7 @@ function App():JSX.Element {
       name: 'Question #1',
       answer: '1',
       price: 100,
-      isEnabled: true,
+      isEnable: true,
     },
     {
       id: 7,
@@ -63,7 +64,7 @@ function App():JSX.Element {
       name: 'Question #2',
       answer: '2',
       price: 200,
-      isEnabled: true,
+      isEnable: true,
     },
     {
       id: 8,
@@ -71,7 +72,7 @@ function App():JSX.Element {
       name: 'Question #3',
       answer: '3',
       price: 300,
-      isEnabled: true,
+      isEnable: true,
     },
     {
       id: 9,
@@ -79,7 +80,7 @@ function App():JSX.Element {
       name: 'Question #4',
       answer: '4',
       price: 400,
-      isEnabled: true,
+      isEnable: true,
     },
     {
       id: 10,
@@ -87,7 +88,7 @@ function App():JSX.Element {
       name: 'Question #5',
       answer: '5',
       price: 500,
-      isEnabled: true,
+      isEnable: true,
     },
     {
       id: 11,
@@ -95,7 +96,7 @@ function App():JSX.Element {
       name: 'Question #1',
       answer: '1',
       price: 100,
-      isEnabled: true,
+      isEnable: true,
     },
     {
       id: 12,
@@ -103,7 +104,7 @@ function App():JSX.Element {
       name: 'Question #2',
       answer: '2',
       price: 200,
-      isEnabled: true,
+      isEnable: true,
     },
     {
       id: 13,
@@ -111,7 +112,7 @@ function App():JSX.Element {
       name: 'Question #3',
       answer: '3',
       price: 300,
-      isEnabled: true,
+      isEnable: true,
     },
     {
       id: 14,
@@ -119,7 +120,7 @@ function App():JSX.Element {
       name: 'Question #4',
       answer: '4',
       price: 400,
-      isEnabled: true,
+      isEnable: true,
     },
     {
       id: 15,
@@ -127,7 +128,7 @@ function App():JSX.Element {
       name: 'Question #5',
       answer: '5',
       price: 500,
-      isEnabled: true,
+      isEnable: true,
     },
   ];
 
@@ -140,7 +141,6 @@ function App():JSX.Element {
     <div className="App">
       <Routes>
         <Route path="/" element={<Header />}>
-
           <Route path="/main" element={<MainPage />} />
           <Route path="/results" element={<Results />} />
           <Route path="cards/:QuestionId" element={<CardPage />} />

@@ -10,13 +10,13 @@ export const init = {
 export const userReducer = (
   state: { user: string } = init,
   action: Action
- ): { user: string } => {
+): { user: '' } => {
   switch (action.type) {
-   case 'AUTH':
-    return {
-      ...state,
-      user: action.payload.user
-    };
+    case 'AUTH':
+      return {
+        ...state,
+        user: action.payload.user
+      };
     case 'LOGOUT':
       return {
         ...state,
@@ -24,4 +24,4 @@ export const userReducer = (
       };
     default: return state;
   }
- };
+};
