@@ -1,0 +1,26 @@
+{
+  "name": "jeopardy",
+  "version": "1.0.0",
+  "description": "jeopardy game Team",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sharkeeyy/jeopardy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sharkeeyy/jeopardy/issues"
+  },
+  "homepage": "https://github.com/sharkeeyy/jeopardy#readme",
+  "dependencies": {
+    "pg": "^8.8.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.25.8",
+    "sequelize-cli": "^6.5.2"
+  }
+}
