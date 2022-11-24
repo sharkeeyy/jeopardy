@@ -1,7 +1,10 @@
 import Action from './types/Action';
 
 export const init = {
-  user: ''
+  user: {
+    name: '',
+    score: 0
+  }
 };
 
 export const userReducer = (
