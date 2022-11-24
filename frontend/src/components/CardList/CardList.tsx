@@ -6,13 +6,11 @@ import { RootState } from '../reducer/store';
 function CardList(): JSX.Element {
   const { questions } = useSelector((state: RootState) => state.qState);
 
-  return (
+  return ( 
     <div className="container d-flex flex-row flex-wrap">
-      <ul className="cards__list">
-        {questions.map((card) => (
-          <CardItem key={card.id} card={card} />
-        ))}
-      </ul>
+      {questions.map((card) => (
+        <CardItem key={card.id} card={card} />
+      ))}
     </div>
   );
 }

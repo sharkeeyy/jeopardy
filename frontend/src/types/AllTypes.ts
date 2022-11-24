@@ -6,9 +6,11 @@ export interface Question {
   price: number;
   isEnable: boolean;
 }
-export interface Res { message:string; user:string }
+
+export interface Res { message: string; user: string }
+
 export interface User {
-id: number;
-email: string;
-result: number;
+  id: number;
+  email: string;
+  result: number;
 }
