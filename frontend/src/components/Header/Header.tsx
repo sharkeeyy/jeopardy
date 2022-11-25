@@ -2,12 +2,14 @@ import React from 'react';
 import { NavLink, Outlet, Route } from 'react-router-dom';
 import './Header.css';
 import { useSelector } from 'react-redux';
-import { RootState } from '../reducer/store'
+
+import { RootState } from '../reducer/store';
+
 
 function Header(): JSX.Element {
   const name = useSelector((store: RootState) => store.userState);
   // const user = true;
-  console.log(name, '===')
+
   return (
     (name ? (
       <div className="app__container">
