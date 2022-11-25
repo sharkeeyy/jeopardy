@@ -144,9 +144,7 @@ function App():JSX.Element {
           <Route path="/main" element={<MainPage />} />
           <Route path="/results" element={<Results />} />
           <Route path="/cards/:QuestionId" element={<CardPage />} />
-          <Route path="/registration" element={<Auth />} />
-          <Route path="/login" element={<Auth />} />
-          <Route path="/logout" element={<Auth />} />
+          <Route path="/auth/:route" element={<Auth />} />
         </Route>
       </Routes>
     </div>

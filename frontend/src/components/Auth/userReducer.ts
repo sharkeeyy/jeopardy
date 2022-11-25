@@ -1,5 +1,4 @@
 import Action from './types/Action';
-import State from './types/State';
 
 export const init = {
   name: '',
@@ -7,9 +6,9 @@ export const init = {
 };
 
 export const userReducer = (
-  state: {name:string,score:number} = init,
+  state: { name:string, score:number } = init,
   action: Action
-): {name:string,score:number} => {
+): { name:string, score:number } => {
   switch (action.type) {
     case 'AUTH':
       return {
