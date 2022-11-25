@@ -2,14 +2,13 @@ import React from 'react';
 import { NavLink, Outlet, Route } from 'react-router-dom';
 import './Header.css';
 import { useSelector } from 'react-redux';
-import store from '../reducer/store';
-import { RootState } from '../reducer/store'
+import { RootState } from '../reducer/store';
 
 function Header(): JSX.Element {
-  // const { user } = useSelector(store: RootState => store.userState);
-  const user = true;
+  const name = useSelector((store: RootState) => store.userState);
+  // const user = true;
   return (
-    (user ? (
+    (name ? (
     <div className="app__container">
       <nav className="header__nav">
         <div className="header__container">
@@ -63,7 +62,7 @@ function Header(): JSX.Element {
         </div>
       </nav>
       <Outlet />
-    </div>
+      </div>
     )
     )
   );
