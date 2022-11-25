@@ -7,21 +7,19 @@ export const init = {
 };
 
 export const userReducer = (
-  state: State = init,
+  state: {name:string,score:number} = init,
   action: Action
-): State => {
+): {name:string,score:number} => {
   switch (action.type) {
     case 'AUTH':
       return {
         ...state,
         name: action.payload.user,
-        score: 0,
       };
     case 'LOGOUT':
       return {
         ...state,
         name: '',
-        score: 0,
       };
     default: return state;
   }
