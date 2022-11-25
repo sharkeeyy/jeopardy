@@ -21,6 +21,12 @@ export const userReducer = (
         ...state,
         name: '',
       };
-    default: return state;
+    case 'ADD_SCORE':
+      return {
+        ...state,
+        score: state.score + Number(action.payload),
+      };
+    default:
+      return state;
   }
 };

@@ -7,16 +7,20 @@ function CardPage(): JSX.Element {
   const { QuestionId } = useParams();
   const { questions } = useSelector((state: RootState) => state.qState);
   const [value, setValue] = useState('');
+  const [isRight, setRight] = useState<'none' | boolean>('none');
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const que = questions.find((cardItem) => cardItem.id === Number(QuestionId));
 
   function clickHandler(): void {
     if (que?.answer === value) {
-      dispatch({ type: 'DISABLE_Q', payload: que });
+      setRight(true);
+      dispatch({ type: 'ADD_SCORE', payload: que?.price });
     } else {
-      dispatch({ type: 'DISABLE_Q', payload: que });
+      setRight(false);
     }
+    dispatch({ type: 'DISABLE_Q', payload: que });
     navigate('/main');
   }
 
