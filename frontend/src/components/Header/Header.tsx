@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux';
 
 import { RootState } from '../reducer/store';
 
-
 function Header(): JSX.Element {
   const name = useSelector((store: RootState) => store.userState);
   // const user = true;
