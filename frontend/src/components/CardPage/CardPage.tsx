@@ -25,11 +25,15 @@ function CardPage(): JSX.Element {
   }
 
   return (
-    <div>
-      <h3>{que?.theme}</h3>
-      <h2>{que?.name}</h2>
+    <div className=" d-flex justify-content-center align-items-center w-100 h-100 m-5">
+    <div className="container border border-4 rounded p-3">
+    <div className="card-body">
+      <h1 className="card-title">{que?.theme}</h1>
+      <h2 className="card-text">{que?.name}</h2>
       <input type="text" value={value} onChange={(e) => setValue(e.target.value)} />
-      <button type="button" onClick={clickHandler}>Your answer</button>
+      <button type="button" onClick={clickHandler} className="btn btn-primary ">Your answer</button>
+    </div>
+    </div>
     </div>
   );
 }

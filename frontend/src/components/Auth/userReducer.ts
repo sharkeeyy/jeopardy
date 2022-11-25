@@ -7,9 +7,9 @@ export const init = {
 };
 
 export const userReducer = (
-  state: State = init,
+  state: {name:string,score:number} = init,
   action: Action
-): State => {
+): {name:string,score:number} => {
   switch (action.type) {
     case 'AUTH':
       return {
