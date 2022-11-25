@@ -12,7 +12,7 @@ function App():JSX.Element {
   const array = [
     {
       id: 1,
-      theme: '1',
+      theme: 'Trash',
       name: 'Question #1',
       answer: '1',
       price: 100,
@@ -20,7 +20,7 @@ function App():JSX.Element {
     },
     {
       id: 2,
-      theme: '1',
+      theme: 'Trash',
       name: 'Question #2',
       answer: '2',
       price: 200,
@@ -28,7 +28,7 @@ function App():JSX.Element {
     },
     {
       id: 3,
-      theme: '1',
+      theme: 'Trash',
       name: 'Question #3',
       answer: '3',
       price: 300,
@@ -36,7 +36,7 @@ function App():JSX.Element {
     },
     {
       id: 4,
-      theme: '1',
+      theme: 'Trash',
       name: 'Question #4',
       answer: '4',
       price: 400,
@@ -44,7 +44,7 @@ function App():JSX.Element {
     },
     {
       id: 5,
-      theme: '1',
+      theme: 'Trash',
       name: 'Question #5',
       answer: '5',
       price: 500,
@@ -52,7 +52,7 @@ function App():JSX.Element {
     },
     {
       id: 6,
-      theme: '2',
+      theme: 'Elbrus',
       name: 'Question #1',
       answer: '1',
       price: 100,
@@ -60,7 +60,7 @@ function App():JSX.Element {
     },
     {
       id: 7,
-      theme: '2',
+      theme: 'Elbrus',
       name: 'Question #2',
       answer: '2',
       price: 200,
@@ -68,7 +68,7 @@ function App():JSX.Element {
     },
     {
       id: 8,
-      theme: '2',
+      theme: 'Elbrus',
       name: 'Question #3',
       answer: '3',
       price: 300,
@@ -76,7 +76,7 @@ function App():JSX.Element {
     },
     {
       id: 9,
-      theme: '2',
+      theme: 'Elbrus',
       name: 'Question #4',
       answer: '4',
       price: 400,
@@ -84,7 +84,7 @@ function App():JSX.Element {
     },
     {
       id: 10,
-      theme: '2',
+      theme: 'Elbrus',
       name: 'Question #5',
       answer: '5',
       price: 500,
@@ -92,7 +92,7 @@ function App():JSX.Element {
     },
     {
       id: 11,
-      theme: '3',
+      theme: 'JavaScript',
       name: 'Question #1',
       answer: '1',
       price: 100,
@@ -100,7 +100,7 @@ function App():JSX.Element {
     },
     {
       id: 12,
-      theme: '3',
+      theme: 'JavaScript',
       name: 'Question #2',
       answer: '2',
       price: 200,
@@ -108,7 +108,7 @@ function App():JSX.Element {
     },
     {
       id: 13,
-      theme: '3',
+      theme: 'JavaScript',
       name: 'Question #3',
       answer: '3',
       price: 300,
@@ -116,7 +116,7 @@ function App():JSX.Element {
     },
     {
       id: 14,
-      theme: '3',
+      theme: 'JavaScript',
       name: 'Question #4',
       answer: '4',
       price: 400,
@@ -124,7 +124,7 @@ function App():JSX.Element {
     },
     {
       id: 15,
-      theme: '3',
+      theme: 'JavaScript',
       name: 'Question #5',
       answer: '5',
       price: 500,
@@ -143,7 +143,7 @@ function App():JSX.Element {
         <Route path="/" element={<Header />}>
           <Route path="/main" element={<MainPage />} />
           <Route path="/results" element={<Results />} />
-          <Route path="cards/:QuestionId" element={<CardPage />} />
+          <Route path="/cards/:QuestionId" element={<CardPage />} />
           <Route path="/registration" element={<Auth />} />
           <Route path="/login" element={<Auth />} />
           <Route path="/logout" element={<Auth />} />
