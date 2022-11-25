@@ -2,7 +2,7 @@
   background-color: rgb(91, 45, 141);
   padding: 25px;
   border-radius: 25px;
-  min-width: 600px;
+  width: 600px;
   margin-top: 50px;
   box-shadow: rgba(91, 45, 141, 0.7) 0px 5px 20px 4px;
 }
@@ -12,6 +12,7 @@
   color: white;
   text-transform: uppercase;
   text-align: center;
+  width: 100%;
 }
 
 .btn {

@@ -5,11 +5,12 @@ import { RootState } from '../reducer/store';
 
 function MainPage(): JSX.Element {
   const { score } = useSelector((state: RootState) => state.userState);
+  const { name } = useSelector((state: RootState) => state.userState);
 
   return (
     <>
       <div className="d-flex justify-content-center align-items-center mb-4">
-        <h2>Ваш счет: {score}</h2>
+        <h2 className="text-white">{name}, ваш счет: {score}</h2>
       </div>
 
       <CardList />

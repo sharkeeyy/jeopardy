@@ -74,7 +74,7 @@
     },
     "parserOptions": {
       "project": [
-        "tsconfig.json"
+        "frontend/tsconfig.json"
       ]
     }
   },

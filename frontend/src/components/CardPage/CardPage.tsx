@@ -32,8 +32,8 @@ function CardPage(): JSX.Element {
       {isRight === 'none' && (
         <div className="container border border-5 rounded p-3">
           <div className="card-body">
-            <h1 className="card-title mb-1">{que?.theme}</h1>
-            <h3 className="card-text mb-3">{que?.name}</h3>
+            <h1 className="card-title mb-1 text-white">{que?.theme}</h1>
+            <h3 className="card-text mb-3 text-white">{que?.name}</h3>
             <div className="input-group mb-3">
               <input
                 type="text"
@@ -52,8 +52,8 @@ function CardPage(): JSX.Element {
       {isRight === true && (
         <div className="container border border-5 border-success rounded p-3">
           <div className="card-body">
-            <h1 className="card-title mb-1">{que?.theme}</h1>
-            <h3 className="card-text mb-3">{que?.name}</h3>
+            <h1 className="card-title mb-1 text-white">{que?.theme}</h1>
+            <h3 className="card-text mb-3 text-white">{que?.name}</h3>
             <div className="input-group mb-3">
               <input
                 type="text"
@@ -74,8 +74,8 @@ function CardPage(): JSX.Element {
       {isRight === false && (
         <div className="container border border-5 rounded border-danger p-3">
           <div className="card-body">
-            <h1 className="card-title mb-1">{que?.theme}</h1>
-            <h3 className="card-text mb-3">{que?.name}</h3>
+            <h1 className="card-title mb-1 text-white">{que?.theme}</h1>
+            <h3 className="card-text mb-3 text-white">{que?.name}</h3>
             <div className="input-group mb-3">
               <input
                 type="text"
