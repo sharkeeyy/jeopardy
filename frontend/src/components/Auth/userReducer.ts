@@ -1,26 +1,27 @@
 import Action from './types/Action';
+import State from './types/State';
 
 export const init = {
-  user: {
-    name: '',
-    score: 0
-  }
+  name: '',
+  score: 0,
 };
 
 export const userReducer = (
-  state: { user: string } = init,
+  state: State = init,
   action: Action
-): { user: '' } => {
+): State => {
   switch (action.type) {
     case 'AUTH':
       return {
         ...state,
-        user: action.payload.user
+        name: action.payload.user,
+        score: 0,
       };
     case 'LOGOUT':
       return {
         ...state,
-        user: ''
+        name: '',
+        score: 0,
       };
     default: return state;
   }

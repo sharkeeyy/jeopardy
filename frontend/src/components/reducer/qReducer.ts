@@ -18,7 +18,13 @@ export const qReducer = (
     case 'DISABLE_Q':
     return {
       ...state,
-      questions: [...state.questions, action.payload]
+      questions: state.questions.map((item) => item.id === action.payload.id
+      ? { ...item, isEnable: false }
+      : item)
+
+      // todos: state.todos.map((todo) => todo.id === action.payload.id
+      // ? { ...todo, checked: action.payload.checked }
+      // : todo),
     };
     default: return state;
   }
