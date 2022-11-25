@@ -15,14 +15,18 @@ export const userReducer = (
       return {
         ...state,
         name: action.payload.user,
-        score: 0,
       };
     case 'LOGOUT':
       return {
         ...state,
         name: '',
-        score: 0,
       };
-    default: return state;
+    case 'ADD_SCORE':
+      return {
+        ...state,
+        score: state.score + Number(action.payload),
+      };
+    default:
+      return state;
   }
 };

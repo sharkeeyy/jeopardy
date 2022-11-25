@@ -24,7 +24,7 @@ function App():JSX.Element {
       name: 'Question #2',
       answer: '2',
       price: 200,
-      isEnable: false,
+      isEnable: true,
     },
     {
       id: 3,
@@ -32,7 +32,7 @@ function App():JSX.Element {
       name: 'Question #3',
       answer: '3',
       price: 300,
-      isEnable: false,
+      isEnable: true,
     },
     {
       id: 4,
