@@ -6,11 +6,12 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../reducer/store';
 
 function Header(): JSX.Element {
-  // const name = useSelector((store: RootState) => store.userState);
-  const name = true;
+  const name = useSelector((store: RootState) => store.userState);
+  console.log(name);
+  // const name = '';
 
   return (
-    (name ? (
+    (name.name ? (
       <div className="app__container">
         <nav className="header__nav">
           <div className="header__container">
